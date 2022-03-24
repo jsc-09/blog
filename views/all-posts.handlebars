@@ -1,0 +1,18 @@
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <h3>MY POSTS</h3>
+    </div>
+    <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <div class="callout">
+
+        {{#each posts}}
+        <h3>{{title}}</h3>
+        <p>{{body}}</p>
+        <hr>
+        <p>Posted by {{User.name}} on {{date_created}}</p>
+        {{/each}}  
+        </div>
+      </div>
+    </div>
+  </div>

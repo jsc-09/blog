@@ -1,0 +1,50 @@
+<div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <h2>{{title}}</h2>
+    </div>
+  </div>
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+        <p>{{body}}</p>
+        <hr>
+        <p>Created by {{User.name}} on {{date_created}}</p>
+    </div>
+  </div>
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <h4>Leave a Comment</h4>
+    </div>
+  </div> 
+<form class="new-comment">
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <label>
+        <textarea placeholder="Leave a Comment" id="comment-content"></textarea>
+      </label>
+    </div>
+  </div>
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <button class="submit secondary button">Submit Comment</button>
+    </div>
+  </div>
+</form>
+
+{{#if BlogPost.Comments}}
+<div class="grid-x grid-padding-x">
+  <div class="large-12 cell">
+    <h4>Recent Comments</h4>
+    <hr>
+  </div>
+</div>
+ {{#each BlogPost.Comments}}
+<div class="grid-x grid-padding-x">
+  <div class="large-12 cell">
+      <p>{{body}}</p>
+        <p>Created by {{User.name}} on {{date_created}}</p>
+  </div>
+</div>
+{{/each}}
+{{/if}}
+
+<script src="./js/blog.js"></script>

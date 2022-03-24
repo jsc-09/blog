@@ -1,0 +1,28 @@
+
+
+<div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <h2>Edit Your Post</h2>
+    </div>
+  </div>
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <label>
+        <h3 class="blog-title">{{ BlogPost.title }}</h3>
+        <textarea placeholder="Title"></textarea>
+      </label>
+    </div>
+  </div>
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <label>
+        <textarea class="blog-description" placeholder="Post Content" {{ BlogPost.body }}></textarea>
+      </label>
+    </div>
+  </div>
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <button class="submit success button update-post">Update</button>
+      <button class="submit alert button delete-post">Delete</button>
+    </div>
+  </div>

@@ -1,0 +1,32 @@
+
+
+<div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <h2>Welcome, {{ User.name }}</h2>
+    </div>
+  </div>
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <a href="/newPost"><button class="submit primary button">Create New Post</button></a>
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <h3>MY POSTS</h3>
+    </div>
+  </div>
+    <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <div class="callout">
+        {{#each BlogPost}}
+        <h3>{{title}}e</h3>
+        <p>{{ body }}</p>
+        <hr>
+        <p>Created by {{User.name}} on {{date_created}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="./js/dashboard.js"></script>
